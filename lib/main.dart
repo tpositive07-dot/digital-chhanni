@@ -273,7 +273,7 @@ class ChhanniPainter extends CustomPainter {
     // Fine crossed mesh lines: the camera image remains visible between them.
     canvas.save();
     canvas.clipPath(Path()..addOval(Rect.fromCircle(center: center, radius: radius - 10)));
-    final spacing = (radius / 8).clamp(7.0, 15.0);
+    final spacing = (radius / 45).clamp(3.0, 5.0);
     for (double x = center.dx - radius; x <= center.dx + radius; x += spacing) {
       canvas.drawLine(Offset(x, center.dy - radius), Offset(x, center.dy + radius), fineGold);
     }
